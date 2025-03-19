@@ -62,3 +62,36 @@ h2{
     padding: 20px; /* espaçamento interno */
     text-align: left;
 }
+ol li {
+    padding-bottom: 10px;
+}
+.container3{
+    width: 80%; /* largura de 80% da largura da página */
+    background: rgb(205, 205, 205);
+    border-radius: 10px;
+    /* espaçamento externo 20px acima e abaixo */
+    /* espaçamento externo auto direita e à esquerda */
+    margin: 20px auto;
+    padding: 20px; /* espaçamento interno */
+    text-align: left;
+}
+.container4{
+    width: 80%; /* largura de 80% da largura da página */
+    background: rgb(205, 205, 205);
+    border-radius: 10px;
+    /* espaçamento externo 20px acima e abaixo */
+    /* espaçamento externo auto direita e à esquerda */
+    margin: 20px auto;
+    padding: 20px; /* espaçamento interno */
+    text-align: left;
+}
+ul  li{
+    padding-bottom: 5px;
+}
+table tr td{
+    padding: 20px;
+
+}
+table{
+    margin: 0 auto;  /* centraliza a tabela na página */
+}
