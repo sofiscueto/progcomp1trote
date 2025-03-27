@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; /* espaçamento externo da página */
     padding: 0; /* espaçamento interno da página */
-    background-color: #f4f4f4;
+    background-color: #c8d0d7;
     text-align: center; /* texto centralizado */
 }
 header {
@@ -41,13 +41,14 @@ img{
 
 .container{
     width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
+    background: #c8d0d7;
     border-radius: 10px;
     /* espaçamento externo 20px acima e abaixo */
     /* espaçamento externo auto direita e à esquerda */
     margin: 20px auto;
     padding: 20px; /* espaçamento interno */
     text-align: center;
+    box-shadow: 20px;
 }
 h2{
     text-align: center;
@@ -94,4 +95,60 @@ table tr td{
 }
 table{
     margin: 0 auto;  /* centraliza a tabela na página */
+}
+.titulo{
+    text-align: center;
+}
+.container5{
+    width: 80%; /* largura de 80% da largura da página */
+    background: rgb(205, 205, 205);
+    border-radius: 10px;
+    /* espaçamento externo 20px acima e abaixo */
+    /* espaçamento externo auto direita e à esquerda */
+    margin: 20px auto;
+    padding: 20px; /* espaçamento interno */
+    text-align: left;
+}
+.laranja{
+    background-color: orange;
+}
+.preta{
+    background-color: black;
+    color: white
+}
+.roxa{
+    background-color: purple;
+}
+.verde{
+    background-color: rgb(4, 207, 4);
+}
+.vermelha{
+    background-color: red;
+}
+.azul{
+    background-color: navy;
+    color: white
+}
+.campos{
+    margin-bottom: 20px;
+}
+.container6{
+    width: 80%; /* largura de 80% da largura da página */
+    background: rgb(205, 205, 205);
+    border-radius: 10px;
+    /* espaçamento externo 20px acima e abaixo */
+    /* espaçamento externo auto direita e à esquerda */
+    margin: 20px auto;
+    padding: 20px; /* espaçamento interno */
+    text-align: left;
+}
+.container7{
+    width: 80%; /* largura de 80% da largura da página */
+    background: rgb(205, 205, 205);
+    border-radius: 10px;
+    /* espaçamento externo 20px acima e abaixo */
+    /* espaçamento externo auto direita e à esquerda */
+    margin: 20px auto;
+    padding: 20px; /* espaçamento interno */
+    text-align: left;
 }
