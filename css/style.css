@@ -1,154 +1,344 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* espaçamento externo da página */
-    padding: 0; /* espaçamento interno da página */
-    background-color: #c8d0d7;
-    text-align: center; /* texto centralizado */
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3ec;
+    text-align: center;
 }
+
 header {
-    background-color: #28a745;
-    color: white;
-    /* 15px (espaçamento interno acima e abaixo) e 0px (direita e esquerda)*/
+    background-color: #0060f5;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
     padding: 15px 0px;
-    font-size: 24px; 
+    font-size: 28px;
+    font-weight: 800;
 }
+
 nav {
-    background: #007bff;
-    padding: 10px; /* espaçamento interno do menu */
-    display: flex; /* Flex Boxing */
-    justify-content: space-between; /* espaço entre os elementos do menu*/
-    align-items: center; /* alinhamento na vertical */
-}
-#links-menu{
+    background: #ffb401;
+    padding: 10px;
     display: flex;
-    gap: 30px; /* distância entre os itens do menu*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+#links-menu {
+    display: flex;
+    gap: 30px;
     padding: 30px;
 }
-nav a { /* configura os links do menu */
-    color: white;
-    text-decoration: none; /* não decora os links */
-    padding: 10px 15px; /* (10px acima e abaixo) (15px é esquerda e direita)*/
+
+nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    padding: 10px 15px;
     font-size: 18px;
-    background: #0056b3;
-    border-radius: 5px; /* cantos arredondados */
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #8e640281;
 }
-img{
+
+img {
     width: 120px;
     height: auto;
-    margin-right: 30px; /* espaçamento externo á  direita */
+    margin-right: 30px;
     border-radius: 10px;
 }
 
-.container{
-    width: 80%; /* largura de 80% da largura da página */
-    background: #c8d0d7;
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
+/* Container principal do formulário */
+.container {
+    width: 80%;
+    background: #cdd4d8;
+    border-radius: 20px;
     margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: center;
-    box-shadow: 20px;
-}
-h2{
-    text-align: center;
-}
-.container2{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
-    margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: left;
-}
-ol li {
-    padding-bottom: 10px;
-}
-.container3{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
-    margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: left;
-}
-.container4{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
-    margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: left;
-}
-ul  li{
-    padding-bottom: 5px;
-}
-table tr td{
     padding: 20px;
-
-}
-table{
-    margin: 0 auto;  /* centraliza a tabela na página */
-}
-.titulo{
     text-align: center;
+    box-shadow: 5px 5px 5px #8e640281;
 }
-.container5{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
+
+/* Container das outras páginas */
+.containers {
+    width: 80%;
+    background: #cdd4d8;
+    border-radius: 20px;
     margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
+    padding: 20px;
     text-align: left;
+    box-shadow: 5px 5px 5px #8e640281;
 }
-.laranja{
-    background-color: orange;
+
+/* Container específico da calculadora */
+.containerC {
+    width: 80%;
+    background: #cdd4d8;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 30px 20px; /* Mais espaçamento no topo e embaixo */
+    text-align: left;
+    box-shadow: 5px 5px 5px #8e640281;
 }
-.preta{
-    background-color: black;
-    color: white
+
+/* Título */
+.containerC h2 {
+    margin-bottom: 40px; /* Espaço maior abaixo do título */
 }
-.roxa{
-    background-color: purple;
+
+/* Estilos para o formulário */
+.containerC form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px 0; /* Espaço maior no topo e embaixo do formulário */
 }
-.verde{
-    background-color: rgb(4, 207, 4);
+
+.containerC .campos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px; /* Mais espaço entre os campos */
 }
-.vermelha{
-    background-color: red;
+
+.containerC .campos label {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 16px;
 }
-.azul{
-    background-color: navy;
-    color: white
+
+.containerC .campos input[type="number"],
+.containerC .campos select {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    color: #333;
 }
-.campos{
+
+.containerC .campos input[type="number"]:focus,
+.containerC .campos select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Botão */
+.containerC button {
+    background: linear-gradient(135deg, rgb(121, 135, 152), rgb(133, 148, 168));
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Resultado */
+#soma {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #f0f7ff;
+    border-left: 4px solid #565758;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 30px; /* Espaço maior acima do resultado */
+    margin-left: 20px; /* Espaço à esquerda do resultado */
+    
+}
+
+/* Container do botão e resultado */
+.button-result {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre o botão e o resultado */
+    justify-content: center; /* Alinha ao centro */
+    margin-top: 20px;
+}
+
+/* Estilo do botão */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+thead {
+    background: linear-gradient(135deg, rgb(121, 135, 152), rgb(133, 148, 168));
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid rgba(224, 196, 196, 0.2);
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #6c6363;
+    font-size: 15px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Cores sólidas para cada equipe */
+tr.laranja td:first-child,
+td.laranja {
+    background-color: #f39c12;  /* Cor sólida laranja */
+    font-weight: 600;
+    color: white;
+}
+
+tr.preta td:first-child,
+td.preta {
+    background-color: #34495e;  /* Cor sólida preta */
+    font-weight: 600;
+    color: white;
+}
+
+tr.roxa td:first-child,
+td.roxa {
+    background-color: #9b59b6;  /* Cor sólida roxa */
+    font-weight: 600;
+    color: white;
+}
+
+tr.verde td:first-child,
+td.verde {
+    background-color: #2ecc71;  /* Cor sólida verde */
+    font-weight: 600;
+    color: white;
+}
+
+tr.vermelha td:first-child,
+td.vermelha {
+    background-color: #e74c3c;  /* Cor sólida vermelha */
+    font-weight: 600;
+    color: white;
+}
+
+/* Cabeçalhos de tabelas específicas por equipe */
+table.laranja thead {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+table.preta thead {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+table.roxa thead {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+table.verde thead {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+table.vermelha thead {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Classe para células em destaque */
+.em-breve {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    font-weight: 500;
+    background-color: rgba(236, 240, 241, 0.7);
+}
+
+/* Estilo responsivo para tabelas */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        word-wrap: break-word;
+    }
+    
+    th, td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    /* Responsividade do formulário */
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .campos {
+        margin-bottom: 15px;
+    }
+
+    .campos input[type="number"], .campos select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Ajustes adicionais */
+h3 {
     margin-bottom: 20px;
+    font-size: 28px;
 }
-.container6{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
-    margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: left;
+
+h2, h3, th {
+    line-height: 1.4;
 }
-.container7{
-    width: 80%; /* largura de 80% da largura da página */
-    background: rgb(205, 205, 205);
-    border-radius: 10px;
-    /* espaçamento externo 20px acima e abaixo */
-    /* espaçamento externo auto direita e à esquerda */
-    margin: 20px auto;
-    padding: 20px; /* espaçamento interno */
-    text-align: left;
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.campos {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.campos label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 16px;
 }

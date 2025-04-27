@@ -5,14 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trote Solidário - Calculadora</title>
         <link rel="icon" href="images/trote.jpg">
-        <link rel="stylesheet" href="css\style.css"/>
-        <script src="js\scripts.js"> </script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script>
+            function calcular() {
+                // Pegando os valores dos campos
+                let mascote = parseInt(document.getElementById("mascote").value) || 0;
+                let homenagem = parseInt(document.getElementById("homenagem").value) || 0;
+                let kit = parseInt(document.getElementById("kit").value) || 0;
+                let suplemento = parseInt(document.getElementById("suplemento").value) || 0;
+                let leite = parseInt(document.getElementById("leite").value) || 0;
+                let oleo = parseInt(document.getElementById("oleo").value) || 0;
+                let feijao2 = parseInt(document.getElementById("feijao2").value) || 0;
+                let feijao1 = parseInt(document.getElementById("feijao1").value) || 0;
+                let arroz5 = parseInt(document.getElementById("arroz5").value) || 0;
+                let arroz1 = parseInt(document.getElementById("arroz1").value) || 0;
+                let sangue = parseInt(document.getElementById("sangue").value) || 0;
+
+                // Cálculo da pontuação (exemplo simples, você pode ajustar conforme as regras)
+                let pontuacao = mascote * 10 + homenagem * 5 + kit * 2 + suplemento * 3 + leite * 1 + oleo * 2 + feijao2 * 4 + feijao1 * 3 + arroz5 * 3 + arroz1 * 1 + sangue * 10;
+
+                // Exibindo o resultado
+                document.getElementById("soma").innerText = `Pontuação Total: ${pontuacao}`;
+            }
+        </script>
     </head>
     <body>
-        <header> <!-- cabeçalho do corpo da página -->
+        <header>
             Trote Solidário 2025
         </header>
-        <nav> <!-- barra de navegação (menu de opções) -->
+        <nav>
             <div id="links-menu">
                 <a href="index.html"> Home </a>
                 <a href="introducao.html"> Introdução </a>
@@ -23,36 +44,79 @@
                 <a href="observacoes.html"> Observações </a>
                 <a href="calculadoras.html"> Calculadoras </a>
             </div>
-            <img src="images\trote.jpg" alt="Trote Solitário"/>
+            <img src="images/trote.jpg" alt="Trote Solidário"/>
         </nav>
-    <!--class podemos reutilizar o estilo, id não-->
-    <!--id não pode ser reutilizado porque só temos um elemento por id-->
-        <div class="container3" >
+        <div class="containerC">
             <h2> Calculadoras </h2>
             <form>
                 <div class="campos">
-                    <label> Mascote do Time: </label>
-                    <input  type="number" id="mascote"/>
+                    <label> Selecione a cor da equipe: </label>
+                    <select id="equipe">
+                        <option value="Laranja"> Laranja </option>
+                        <option value="Preta"> Preta </option>
+                        <option value="Roxa"> Roxa </option>
+                        <option value="Verde"> Verde </option>
+                        <option value="Vermelha"> Vermelha </option>
+                    </select>
                 </div>
                 <div class="campos">
-                    <label> Homenagem a um  atleta: </label>
-                    <input  type="number" id="homenagem"/>
+                    <label for="mascote">Mascote do time</label>
+                    <input type="number" id="mascote" name="mascote" min="0" placeholder="Quantidade"/>
                 </div>
+                
                 <div class="campos">
-                    <label> Quantidade de Litros de Leite: </label>
-                    <input  type="number" id="leite"/>
+                    <label for="homenagem">Homenagem a um atleta</label>
+                    <input type="number" id="homenagem" name="homenagem" min="0" placeholder="Quantidade"/>
                 </div>
+                
                 <div class="campos">
-                    <label> Kit Alimentação (Avulso): </label>
-                    <input  type="number" id="kitAvulso"/>
+                    <label for="kit">Quantidade de Kits</label>
+                    <input type="number" id="kit" name="kit" min="0" placeholder="Quantidade"/>
                 </div>
+                
                 <div class="campos">
-                    <label> Suplemento (Avulso): </label>
-                    <input  type="number" id="suplementoAvulso"/>
+                    <label for="suplemento">Quantidade de latas de suplemento</label>
+                    <input type="number" id="suplemento" name="suplemento" min="0" placeholder="Quantidade"/>
                 </div>
+                
                 <div class="campos">
-                    <button type="button" onclick="calcular()"> Calcular </button>
-                    <label id="soma"> </label>
+                    <label for="leite">Quantidade de litros de leite</label>
+                    <input type="number" id="leite" name="leite" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="oleo">Quantidade de litros de óleo</label>
+                    <input type="number" id="oleo" name="oleo" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="feijao2">Quantidade de pacotes de feijão (2kg)</label>
+                    <input type="number" id="feijao2" name="feijao2" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="feijao1">Quantidade de pacotes de feijão (1kg)</label>
+                    <input type="number" id="feijao1" name="feijao1" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="arroz5">Quantidade de pacotes de arroz (5kg)</label>
+                    <input type="number" id="arroz5" name="arroz5" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="arroz1">Quantidade de pacotes de arroz (1kg)</label>
+                    <input type="number" id="arroz1" name="arroz1" min="0" placeholder="Quantidade"/>
+                </div>
+                
+                <div class="campos">
+                    <label for="macarrao">Doações de sangue</label>
+                    <input type="number" id="sangue" name="sangue" min="0" placeholder="Quantidade"/>
+                </div>
+
+                <div class="campos resultado">
+                    <button type="button" onclick="calcular()">Calcular Pontuação</button>
+                    <label id="soma">Resultado aparecerá aqui</label>
                 </div>
             </form>
         </div>
